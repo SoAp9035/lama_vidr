@@ -35,7 +35,7 @@ git clone https://github.com/SoAp9035/lama_vidr.git
 
 To use lama_vidr, follow these steps:
 - Open the lama_vidr.py file.
-- Specify the path of the video and the mask.
+- Define the path of the video and the mask.
 - Run the script.
 
 Note: Make sure you have the necessary dependencies installed before running the script.
