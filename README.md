@@ -5,8 +5,14 @@ lama_vidr is a code written using lama to remove unwanted objects or watermarks 
 ## Samples
 
 <div align="center">
-  <img src="sample1.gif" width="256" height="256"/>
-  <img src="sample1_fixed.gif" width="256" height="256"/>
+  <img src="sample_videos/Samples for github/sample1.gif" width="256" height="256"/>
+  <img src="sample_videos/Samples for github/sample1_fixed.gif" width="256" height="256"/>
+</div>
+
+<div align="center">
+  <img src="sample_videos/Samples for github/sample2.gif" width="256" height="256"/>
+  <img src="masks/mask14_768x768.png" width="256" height="256"/>
+  <img src="sample_videos/Samples for github/sample2_fixed.gif" width="256" height="256"/>
 </div>
 
 ## Installation
@@ -19,7 +25,7 @@ Please make sure you have these dependencies installed before proceeding.
 
 To install lama_vidr, you can follow these steps:
 - Create a directory on your local machine.
-- Open the command prompt and navigate to the directory you just created.
+- Open the command prompt and go to the directory you just created.
 - Run the following command to clone the lama_vidr repository: 
 ```
 git clone https://github.com/SoAp9035/lama_vidr.git
