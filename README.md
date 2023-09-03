@@ -20,7 +20,7 @@ lama_vidr is a code written using lama to remove unwanted objects or watermarks 
 To install lama_vidr, you can follow these steps:
 - Create a directory on your local machine.
 - Open the command prompt and go to the directory you just created.
-- Run the following command to clone the lama_vidr repository: 
+- Run the following commands to clone the lama_vidr repository: 
 ```
 git clone https://github.com/SoAp9035/lama_vidr.git
 cd lama_vidr
