@@ -3,7 +3,7 @@ import subprocess
 import cv2
 import random
 import string
-
+from ffmpy import FFmpeg
 
 # Input and output values (INPUT YOUR VIDEO AND MASK)
 current_directory = os.path.dirname(os.path.abspath(__file__))
@@ -39,13 +39,27 @@ foto_del(frames_directory)
 foto_del(output_frames_directory)
 
 # Split the video into frames
-subprocess.call('ffmpeg -i {} {}'.format(video_path, os.path.join(frames_directory, 'frame%05d.png')))
+output_pattern = os.path.join(frames_directory, 'frame%05d.png')
+
+ff = FFmpeg(
+    inputs={video_path: None},
+    outputs={output_pattern: None}
+)
+
+ff.run()
 
 input_frames = os.listdir(frames_directory)
 for frame in input_frames:
-    subprocess.call('simple_lama {} {} {}'.format(os.path.join(frames_directory, frame),
+    subprocess.call('simple_lama "{}" "{}" "{}"'.format(os.path.join(frames_directory, frame),
                                                   mask_path,
                                                   os.path.join(output_frames_directory, frame)))
 
 # Merge processed frames into a single video (CHANGE THIS IF YOUR VIDEO IS NOT WORKING)
-subprocess.call('ffmpeg -framerate {} -i {} -pix_fmt yuv420p {}'.format(frame_rate, os.path.join(output_frames_directory, 'frame%05d.png'), output_video_path))
+input_pattern = os.path.join(output_frames_directory, 'frame%05d.png')
+
+ff = FFmpeg(
+    inputs={input_pattern: '-framerate {}'.format(frame_rate)},
+    outputs={output_video_path: '-pix_fmt yuv420p'}
+)
+
+ff.run()
