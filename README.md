@@ -17,18 +17,14 @@ lama_vidr is a code written using lama to remove unwanted objects or watermarks 
 
 ## Installation
 
-To install and use lama_vidr, you need to have the following dependencies:
-- [ffmpeg](https://github.com/FFmpeg/FFmpeg)
-- [simple-lama-inpainting](https://github.com/enesmsahin/simple-lama-inpainting)
-
-Please make sure you have these dependencies installed before proceeding.
-
 To install lama_vidr, you can follow these steps:
 - Create a directory on your local machine.
 - Open the command prompt and go to the directory you just created.
 - Run the following command to clone the lama_vidr repository: 
 ```
 git clone https://github.com/SoAp9035/lama_vidr.git
+cd lama_vidr
+pip install -r requirements.txt
 ```
 
 ## Usage
@@ -38,9 +34,7 @@ To use lama_vidr, follow these steps:
 - Define the path of the video and the mask.
 - Run the script.
 
-Note: Make sure you have the necessary dependencies installed before running the script.
+## Source
 
-## Dependencies
-
-- ffmpeg: [https://github.com/FFmpeg/FFmpeg](https://github.com/FFmpeg/FFmpeg)
+- ffmpy: [https://github.com/Ch00k/ffmpy](https://github.com/Ch00k/ffmpy)
 - simple-lama-inpainting: [https://github.com/enesmsahin/simple-lama-inpainting](https://github.com/enesmsahin/simple-lama-inpainting)
