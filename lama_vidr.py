@@ -1,4 +1,5 @@
 import os
+import sys
 import subprocess
 import cv2
 import random
@@ -7,10 +8,10 @@ from ffmpy import FFmpeg
 
 # Input and output values (INPUT YOUR VIDEO AND MASK)
 current_directory = os.path.dirname(os.path.abspath(__file__))
-video_path = r"YOUR_VIDEO"
+video_path = sys.argv[1]
 frames_directory = os.path.join(current_directory, "frames")
 output_frames_directory = os.path.join(current_directory, "output_frames")
-mask_path = r"YOUR_MASK_IMG"
+mask_path = sys.argv[2]
 output_video_path = os.path.join(current_directory, f"output_videos\\video_{''.join(random.choices(string.ascii_lowercase, k=3))}.mp4")
 
 # Calculate video framerate
